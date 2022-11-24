@@ -13,7 +13,7 @@ class Database:
         self.db_name = db_name
         self.working_dir = os.path.join(os.getcwd().split(self.directory)[0], self.directory, "src")
         self.data_dir = os.path.join(os.getcwd().split(self.directory)[0], self.directory, "data")
-        self.database_location = os.path.join(self.data_dir, self.db_name)
+        self.database_location = os.path.join(self.working_dir, self.db_name)
         self.SQLALCHEMY_DATABASE_URL = f"sqlite:///{self.database_location}"
 
         # Only create new database if it either not exists or it is explicitly said to be overwritten.
