@@ -9,7 +9,7 @@ import os
 class Database:
     def __init__(self, db_name="AuctionData.db", overwrite_db=False):
         # Initialize all database variables and directory references
-        self.directory = 'DatacationDay2022'
+        self.directory = 'DatacationDay22'
         self.db_name = db_name
         self.working_dir = os.path.join(os.getcwd().split(self.directory)[0], self.directory, "src")
         self.data_dir = os.path.join(os.getcwd().split(self.directory)[0], self.directory, "data")
@@ -155,5 +155,3 @@ class Database:
         # Close database connection an return query results
         conn.close()
         return data
-
-db = Database()
